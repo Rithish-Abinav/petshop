@@ -1,0 +1,669 @@
+@media screen and (max-width:500px) {
+  @font-face {
+    font-family: rb;
+    src: url(assests/Roboto/Roboto-Medium.ttf);
+  }
+  @font-face {
+    font-family: rr;
+    src: url(assests/Roboto/Roboto-Regular.ttf);
+  }
+  
+
+    *{
+    margin: 0;
+    padding: 0;
+  }  
+  .open-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  
+  }
+  .clouds{
+    width: 90%;
+    height:fit-content;
+    margin: auto;
+    background-color: red;
+    position: relative;
+    margin-top: 10%;
+  }
+  #cloud1{
+    height: 60px;
+    position: absolute;
+    left: 17%;
+    animation-name: c1;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+  }
+  @keyframes c1 {
+    from{
+      transform: translateX(0px);
+    }
+    to{
+      transform: translateX(-10px);
+    }
+  }
+  #cloud2{
+    height: 40px;
+    position: absolute;
+    right: 20%;
+    animation-name: c2;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+  }
+  @keyframes c2 {
+    from{
+      transform: translateX(0px);
+    }
+    to{
+      transform: translateX(10px);
+    }
+  }
+  #cloud3{
+    height: 35px;
+    position: absolute;
+    top: 80px;
+    left: 1%;
+    animation-name: c3;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+   
+  }
+  @keyframes c3 {
+    from{
+      transform: translateX(0px);
+    }
+    to{
+      transform: translateX(-10px);
+    }
+  }
+  #cloud4{
+    height: 30px;
+    position: absolute;
+    right: 30%;
+    top: 80px;
+    animation-name: c4;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+  }
+  @keyframes c4 {
+    from{
+      transform: translateX(0px);
+    }
+    to{
+      transform: translateX(10px);
+    }
+  }
+  #girl{
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    animation-name: girl;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+  }
+  @keyframes girl {
+    from{
+      transform: translateX(0px);
+    }
+    to{
+      transform: translateX(10px);
+    }
+  }
+  .open-page h6{
+position: relative;
+top: 49vh;
+width:80%;
+margin: auto;
+font-size: 2rem;
+font-family: rb;
+font-weight: bold;
+text-align: center;
+  }
+  span{
+    color: #0A6582;
+  }
+  .open-page p{
+    position: relative;
+    top: 50vh;
+    width: 80%;
+    margin: auto;
+    font-family: rr;
+    font-size: 1rem;
+    text-align: center;
+  }
+#continue{
+  background: linear-gradient(#12768C,#40869F,#12768C);
+  color: white;
+  font-family: rr;
+  font-size: 1.2rem;
+  padding: 15px 55px;
+  position: relative;
+  top: 53vh;
+  border-radius: 10px;
+  border: none;
+ width: fit-content;
+  box-shadow: 1px 1px 5px black;
+}
+
+
+
+
+
+.mainpage{
+  width: 100%;
+  height: 100vh;
+  padding-top: 5%;
+ display: none;
+ animation-name: view;
+ animation-duration: 0.5s;
+}
+@keyframes view {
+  from{
+    transform: scale(0.9);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+.mainpage{
+ display: none;
+}
+main{
+  width: 95%;
+  margin: auto;
+}
+.mainpage .header{
+  height: 8vh;
+  width: 100%;;
+
+}
+.mainpage .left{
+  width: 40%;
+  height: 8vh;
+  float: left;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+select{
+  background-color: initial;
+}
+.mainpage .right{
+  width: 25%;
+  height: 100%;
+
+ 
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+}
+#location{
+  font-family: rb;
+  font-size: 1.5rem;
+}
+
+.search-icon{
+  background-color: gainsboro;
+  height: 60%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.search-icon img{
+  height: 80%;
+}
+.notify-icon{
+  background-color: gainsboro;
+  height: 60%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.notify-icon img{
+  height: 80%;
+}
+.banner{
+  background-image: url(assests/joinbanner.png);
+  background-size: cover;
+ height: 23vh;
+  width: 100%;
+  margin: auto;
+  margin-top: 10%;
+  border-radius: 10px;
+  position: relative;
+  
+}
+.banner p{
+  width: 50%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 22px;
+  color: white;
+  line-height: 36px;
+  opacity: 80%;
+  font-family: rb;
+}
+#join-now{
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  font-size: 15px;
+  color: white;
+  background-color: #BB9F03;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px rgb(109, 107, 107);
+
+}
+.category{
+margin-top: 5%;
+  height: 18vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.category-items{
+  display: flex;
+  justify-content: space-around;
+  height: 60%;
+}
+.category p{
+  font-size: 25px;
+  font-family: rb;
+  height: 40%;
+}
+.category-items .icon{
+  width: 16%;
+  height: 70%;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: rr;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 2px rgb(141, 140, 140);
+}
+.category-items .icon img{
+  height: 60%;
+}
+.category-items .cats{
+  width: 16%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: rr;
+  border-radius: 5px;
+  background-color: #0B93B6;
+  color: white;
+  box-shadow: 0.5px 0.5px 2px rgb(141, 140, 140);
+}
+.category-items .dogs{
+  width: 16%;
+  height: 70%;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: rr;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 2px rgb(141, 140, 140);
+}
+.category-items .fishes{
+  width: 16%;
+  height: 70%;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: rr;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 2px rgb(141, 140, 140);
+}
+.category-items .birds{
+  width: 16%;
+  height: 70%;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: rr;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 2px rgb(141, 140, 140);
+}
+.adopt{
+  padding-bottom: 10vh;
+}
+.adopt p{
+  font-size: 25px;
+  font-family: rb;
+  height: 40%;
+  margin-left: 3.5%;
+}
+.images{
+  height: 40vh;
+  display: flex;
+  width: 100vw;
+margin-top: 3%;
+  overflow-x:auto;
+}
+.images img{
+  height: 100%;
+  position: relative;
+  margin-right: 3%;
+  margin-left: 2%;
+}
+.header select{
+  width: 65%;
+  border: none;
+}
+.message{
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  height: 35vh;
+  position: absolute;
+  top: 20vh;
+  z-index: 2;
+  display: none !important;
+  animation-name: msg;
+  animation-duration: 0.2s;
+}
+@keyframes msg {
+  from{
+    opacity: 0;
+  }
+  to{
+   opacity: 100%;
+  }
+}
+.form{
+ 
+ 
+  height:fit-content;
+  background-color: rgb(65, 64, 64);
+  padding-bottom: 10%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 85;
+border-radius: 5%;
+position: absolute;
+z-index: 2;
+
+
+}
+.block{
+  display: block !important;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-35%, -50%);
+
+}
+.blur{
+  filter: blur(1px);
+}
+
+
+
+.form h1{
+  font-size: 1rem;
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+  text-align: center;
+  padding: 5% 0%;
+  color: whitesmoke;
+  font-family: rr;
+  letter-spacing: 1px;
+}
+#name{
+padding: 2% 2%;
+margin: 0px auto;
+width: fit-content;
+display: flex;
+width: 80%;
+margin-bottom: 4%;
+margin-top: 1%;
+}
+#number{
+  
+padding: 2% 2%;
+  margin: 0px auto;
+  width: fit-content;
+  display: flex;
+  width: 80%;
+  margin-top: 2%;
+  }
+  #submit{
+    margin-top: 10%;
+    padding: 7px 20px;
+    font-family: rr;
+    font-size: 0.9rem;
+    color: whitesmoke;
+    background-color: black;
+    border: solid gainsboro 2px;
+    border-radius: 8%;
+  }
+  .area{
+    display: flex;
+    align-items: center;
+  }
+nav{
+  height: 8vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  align-items: center;
+}
+.home{
+  height: 50%;
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.like{
+  height: 50%;
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.mail{
+  height: 50%;
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.user{
+  height: 50%;
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav img{
+  height: 100%;
+}
+
+.items{
+  width: 100%;
+  height: 100vh;
+  display: none;
+  font-family: rr;
+  animation: item;
+  animation-duration: 0.5s;
+}
+@keyframes item {
+  from{
+    transform: translateY(300px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+.back{
+  position:fixed;
+  background-color: black;
+  border-radius: 20%;
+  width: 10vw;
+  height: 5vh;
+  top: 3%;
+  left: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back img{
+  height: 60%;
+}
+.items .image{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.items .image img{
+  width: 100%;
+}
+.items .content{
+  height:40%;
+  position: relative;
+  top: -50px;
+  border-radius: 5%;
+  width:100%;
+background-color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+.items .top{
+width: 90%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7%;
+  padding-top: 3%;
+  justify-content: space-between;
+}
+.items h1{
+  font-size: 1.5rem;
+}
+.content span{
+height: 10%;
+}
+#locate{
+  height: 3vh;
+}
+.content p{
+ display: flex;
+ align-items: center;
+}
+
+.container{
+
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+}
+.sex{
+  padding: 10px;
+  font-size: 1rem;
+  background-color: gainsboro;
+  height: 55%;
+  width: 16%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 10%;
+}
+.weight{
+  padding: 10px;
+  font-size: 1rem;
+  background-color: gainsboro;
+  height: 55%;
+  width: 16%;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 10%;
+}
+.age{
+  padding: 10px;
+  font-size: 1rem;
+  background-color: gainsboro;
+  height: 55%;
+  width: 16%;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+border-radius: 10%;
+align-items: center;
+}
+.details{
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  line-height: 150%;
+}
+.details span{
+  color: black;
+  font-size: 0.8rem;
+  padding-left: 2%;
+
+}
+#done{
+  background: linear-gradient(#12768C,#40869F,#12768C);
+  color: white;
+  font-family: rr;
+  font-size: 1.2rem;
+  padding: 15px 85px;
+  border-radius: 10px;
+  border: none;
+position: relative;
+top: 10%;
+box-shadow: 1px 1px 5px black}
+
+
+
+}

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="open-page">
+        <div class="clouds">
+            <img id="cloud1" src="assests/cloud2.png">
+            <img id="cloud2" src="assests/cloud1.png">
+            <img id="cloud3" src="assests/cloud1.png">
+            <img id="cloud4" src="assests/cloud3.png">
+            <img id="girl" src="assests/girlwithcat.png">
+        </div>
+        <h6>Find Your <span>Dream</span> Pet here</h6>
+        <p>Join us and Discover the latest pet in your location</p>
+        <button id="continue" onclick="view()">Continue</button>
+    </div>
+
+    <div class="mainpage">
+        <main>
+        <div class="header">
+            <div class="left">
+                <select onchange="cng()">
+                    <option value="chennai">Chennai</option> 
+                    <option value="salem">Salem</option>
+                    <option value="vellore">Vellore</option>
+                    <option value="trichy">Trichy</option>
+                    <option value="coimbatore">Coimbatore</option>               
+                </select>
+                <h1 id="location">Chennai,TN</h1>
+            </div>
+            <div class="right">
+                <div class="search-icon">
+                    <img src="assests/search.png">
+                </div>
+                <div class="notify-icon">
+                    <img src="assests/notify.png">
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <p>Join Our Animal Lover Community</p>
+            <button onclick="folo()" id="join-now">Join Now</button>
+        </div>
+
+        <div class="category">
+            <p>Categories</p>
+            <div class="category-items">
+                <div class="icon"><img src="assests/category.png"></div>
+                <div onclick="cat()" class="cats">Cats</div>
+                <div onclick="dog()" class="dogs">Dogs</div>
+                <div onclick="fish()" class="fishes">Fishes</div>
+                <div onclick="bird()" class="birds">Birds</div>
+            </div>
+        </div>
+    </main>
+
+        <div class="adopt">
+            <p>Adopt Pet</p>
+            <div class="images">
+                <img onclick="fluffy()" id="card1" src="assests/card1.png">
+                <img onclick="fluffy2()" id="card2" src="assests/card2.png">
+                <img onclick="fluffy3()" id="card3" src="assests/card3.png">
+            </div>
+        </div>
+        <nav>
+            <div class="home"><img src="assests/icons8-home-96.png"></div>
+            <div class="like"><img src="assests/icons8-love-90.png"></div>
+            <div class="mail"><img src="assests/icons8-mail-96.png"></div>
+            <div class="user"><img src="assests/icons8-user-90.png"></div>
+        </nav>
+    
+    </div>
+    <div class="message">
+        <div class="form">
+           <h1> Join our Animal Lover Community</h1>
+            <input id="name" type="text" placeholder="Enter Your Name">
+            <input id="number" type="text" placeholder="Enter Your Number">
+            <button onclick="sub()" id="submit" type="submit">SUBMIT</button>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+        <div class="items">
+            <div onclick="goback()" class="back"><img src="assests/back1.png"></div>
+            <div class="image">
+                <img id="item-image" src="assests/card1.png">
+            </div>
+
+            <div class="content">
+                <div class="top">
+            <h1 id="pet-name">Fluffy</h1>
+           <div class="area"> <img id="locate" src="assests/location.png"><p id="location-name">Kodambakkam,Chennai-66</p></div>
+                </div>
+                <div class="container">
+                    <div class="sex">
+                        <h4 id="petsex">Male</h4>
+                        <p>sex</p>
+                    </div>
+                    <div class="age">
+                        <h4 id="petage">1 Year</h4>
+                        <p>Age</p>
+                    </div>
+                    <div class="weight">
+                        <h4 id="petweight">10 Kg</h4>
+                        <p>Weight</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <h4>Owner Name    :<span id="owner-name"> Abarna</span></h4>
+                    <h4>Owner Contact :<span id="owner-conatct">8754534033</span></h4>
+                    <h4>Description   :<br><span>Lorem ipsum dolor sit amet consectetur adipise quidem aut ratione. Quod, unde voluptates.</span></h4>
+                </div>
+                <button onclick="adopt()" id="done">Adopt Me</button>
+            </div>
+        </div>
+
+    <script>
+let area=document.querySelector("#location");
+let select=document.querySelector("select");
+let openpage=document.querySelector(".open-page");
+let mainpage=document.querySelector(".mainpage");
+let cats=document.querySelector(".cats");
+let dogs=document.querySelector(".dogs");
+let fishes=document.querySelector(".fishes");
+let birds=document.querySelector(".birds");
+let card1=document.querySelector("#card1");
+let card2=document.querySelector("#card2");
+let card3=document.querySelector("#card3");
+let join=document.querySelector("#join-now");
+let form=document.querySelector(".form");
+let name=document.querySelector("#name");
+let number=document.querySelector("#number");
+let msg=document.querySelector(".message")
+let body=document.querySelector("body")
+let items=document.querySelector(".items");
+let image=document.querySelector("#item-image");
+let petname=document.querySelector("#pet-name");
+let locationname=document.querySelector("#location-name")
+let back=document.querySelector(".back");
+let done=document.querySelector("#done");
+let petsex=document.querySelector("#petsex");
+let petage=document.querySelector("#petage");
+let petweight=document.querySelector("#petweight");
+let ownername=document.querySelector("#owner-name");
+let ownercontact=document.querySelector("#owner-contact");
+var locationimage=document.querySelector("#locate");
+
+function view(){
+    openpage.style.display="none";
+    mainpage.style.display="block";
+}
+function folo(){
+msg.classList.add("block");
+mainpage.classList.add("blur");
+}
+function sub(){
+   if(name.value==""){
+    name.style.borderColor="red";
+    return true;
+   }
+   if(number.value==""){
+    number.style.borderColor="red";
+    return true;
+   }
+   else{
+    msg.classList.remove("block");
+mainpage.classList.remove("blur");
+name.style.borderColor="none";
+number.style.borderColor="none";
+   }
+   
+alert("Thanks for Joining Our Animal Lover Community")
+}
+
+
+function cng(){
+if(select.value=="salem"){
+    area.innerHTML="Salem,TN";
+}
+if(select.value=="chennai"){
+    area.innerHTML="Chenai,TN";
+}
+if(select.value=="vellore"){
+    area.innerHTML="Vellore,TN";
+}
+if(select.value=="trichy"){
+    area.innerHTML="Trichy,TN";
+}
+if(select.value=="coimbatore"){
+    area.innerHTML="Coimbatore,TN";
+}
+}
+function cat(){
+    cats.style.backgroundColor="#0B93B6";
+    dogs.style.backgroundColor="gainsboro";
+    dogs.style.color="black";
+    fishes.style.backgroundColor="gainsboro";
+    fishes.style.color="black";
+    birds.style.backgroundColor="gainsboro";
+    birds.style.color="black"
+cats.style.color="white"
+card1.src="assests/card1.png"
+    card2.src="assests/card2.png"
+    card3.src="assests/card3.png"
+ }
+ function dog(){
+    dogs.style.backgroundColor="#0B93B6";
+    dogs.style.color="white"
+    fishes.style.backgroundColor="gainsboro";
+    fishes.style.color="black";
+    birds.style.backgroundColor="gainsboro";
+    birds.style.color="black"
+    cats.style.backgroundColor="gainsboro";
+    cats.style.color="black";
+    card1.src="assests/dog1.png"
+    card2.src="assests/dog2.png"
+    card3.src="assests/dog3.png"
+ }
+ function fish(){
+    fishes.style.backgroundColor="#0B93B6";
+    fishes.style.color="white"
+    birds.style.backgroundColor="gainsboro";
+    birds.style.color="black"
+    cats.style.backgroundColor="gainsboro";
+    cats.style.color="black";
+    dogs.style.backgroundColor="gainsboro";
+    dogs.style.color="black"
+    card1.src="assests/fish1.png"
+    card2.src="assests/fish2.png"
+    card3.src="assests/fish3.png"
+ }
+ function bird(){
+    birds.style.backgroundColor="#0B93B6";
+    birds.style.color="white"
+    cats.style.backgroundColor="gainsboro";
+    cats.style.color="black";
+    dogs.style.backgroundColor="gainsboro";
+    dogs.style.color="black"
+    fishes.style.backgroundColor="gainsboro";
+    fishes.style.color="black"
+    card1.src="assests/bird1.png"
+    card2.src="assests/bird2.png"
+    card3.src="assests/bird3.png"
+ }
+function fluffy(){
+   
+    mainpage.style.display="none";
+items.style.display="block";
+image.src="assests/card1full.png";
+if(cats.style.color=="white"){
+    
+    petname.innerHTML="Fluffy";
+    petsex.textContent="Male";
+    petage.innerHTML="1 Year";
+    petweight.innerHTML="6 Kg";
+   
+    locationname.innerHTML="Villivakam,Chennai-25";
+  ownername.innerHTML="Abarna";
+  ownercontact.innerHTML="7010273400";
+
+    
+}
+else if(dogs.style.color=="white"){
+    image.src="assests/dog1full.png";
+    petname.innerHTML="Jimmy";
+    petsex.textContent="Female";
+    petage.innerHTML="3 Year";
+    petweight.innerHTML="11 Kg";
+
+   
+       locationname.innerHTML="Annanagar,Chennai-65";
+  ownername.innerHTML="Lokesh";
+  ownercontact.innerHTML="8245484754";
+
+
+
+  
+}
+else if(birds.style.color=="white"){
+    image.src="assests/bird1full.png";
+    petname.innerHTML="Wanky";
+    petsex.textContent="Female";
+    petage.innerHTML="9 Month";
+    petweight.innerHTML="0.48 Kg";
+ 
+    locationname.innerHTML="Kolathur,Chennai-41";
+  ownername.innerHTML="Kamalesh";
+  ownercontact.innerHTML="8778585966";
+    
+}
+else if(fishes.style.color=="white"){
+    image.src="assests/fish1full.png";
+    petname.innerHTML="Nimo";
+    petsex.textContent="Female";
+    petage.innerHTML="1 Year";
+    petweight.innerHTML="0.26 Kg";
+    locationname.innerHTML="Perambur,Chennai-37";
+  ownername.textContent="Vignesh";
+  ownercontact.innerHTML="9840555125";
+    
+}
+
+}
+
+
+
+function fluffy2(){
+   
+   mainpage.style.display="none";
+items.style.display="block";
+image.src="assests/cat2.png";
+if(cats.style.color=="white"){
+   
+   petname.innerHTML="Jimmy";
+   petsex.textContent="Male";
+   petage.innerHTML="3 Year";
+   petweight.innerHTML="5.5 Kg";
+  
+   locationname.innerHTML="Saligramam,Chennai-66";
+ ownername.innerHTML="Kiran Kumar";
+ ownercontact.innerHTML="7874565256";
+
+   
+}
+else if(dogs.style.color=="white"){
+   image.src="assests/dog2full.png";
+   petname.innerHTML="Tom";
+   petsex.textContent="Male";
+   petage.innerHTML="2.3 Year";
+   petweight.innerHTML="13 Kg";
+
+  
+      locationname.innerHTML="Kilpauk,Chennai-25";
+ ownername.innerHTML="praveen";
+ ownercontact.innerHTML="6398565856";
+
+
+
+ 
+}
+else if(birds.style.color=="white"){
+   image.src="assests/bird2full.png";
+   petname.innerHTML="Riyo";
+   petsex.textContent="Female";
+   petage.innerHTML="2 Month";
+   petweight.innerHTML="1.3 Kg";
+
+   locationname.innerHTML="Kolathur,Chennai-25";
+ ownername.innerHTML="Zubair";
+ ownercontact.innerHTML="7454145246";
+   
+}
+else if(fishes.style.color=="white"){
+   image.src="assests/fish2full.png";
+   petname.innerHTML="Rossy";
+   petsex.textContent="Female";
+   petage.innerHTML="5 Year";
+   petweight.innerHTML="1.2 Kg";
+   locationname.innerHTML="Adyar,Chennai-25";
+ ownername.textContent="Pavithra";
+ ownercontact.innerHTML="8745896565";
+   
+}
+
+}
+
+
+function fluffy2(){
+   
+   mainpage.style.display="none";
+items.style.display="block";
+image.src="assests/card2full.png";
+if(cats.style.color=="white"){
+   
+   petname.innerHTML="Jimmy";
+   petsex.textContent="Male";
+   petage.innerHTML="3 Year";
+   petweight.innerHTML="5.5 Kg";
+  
+   locationname.innerHTML="Saligramam,Chennai-66";
+ ownername.innerHTML="Kiran Kumar";
+ ownercontact.innerHTML="7874565256";
+
+   
+}
+else if(dogs.style.color=="white"){
+   image.src="assests/dog2full.png";
+   petname.innerHTML="Tom";
+   petsex.textContent="Male";
+   petage.innerHTML="2.3 Year";
+   petweight.innerHTML="13 Kg";
+
+  
+      locationname.innerHTML="Kilpauk,Chennai-25";
+ ownername.innerHTML="praveen";
+ ownercontact.innerHTML="6398565856";
+
+
+
+ 
+}
+else if(birds.style.color=="white"){
+   image.src="assests/bird2full.png";
+   petname.innerHTML="Riyo";
+   petsex.textContent="Female";
+   petage.innerHTML="2 Month";
+   petweight.innerHTML="1.3 Kg";
+
+   locationname.innerHTML="Kolathur,Chennai-25";
+ ownername.innerHTML="Zubair";
+ ownercontact.innerHTML="7454145246";
+   
+}
+else if(fishes.style.color=="white"){
+   image.src="assests/fish2full.png";
+   petname.innerHTML="Rossy";
+   petsex.textContent="Female";
+   petage.innerHTML="5 Year";
+   petweight.innerHTML="1.2 Kg";
+   locationname.innerHTML="Adyar,Chennai-25";
+ ownername.textContent="Pavithra";
+ ownercontact.innerHTML="8745896565";
+   
+}
+
+}
+
+function fluffy3(){
+   
+   mainpage.style.display="none";
+items.style.display="block";
+image.src="assests/card3full.png";
+if(cats.style.color=="white"){
+   
+   petname.innerHTML="Simon";
+   petsex.textContent="Male";
+   petage.innerHTML="2 Year";
+   petweight.innerHTML="3 Kg";
+  
+   locationname.innerHTML="Parrys,Chennai-78";
+ ownername.innerHTML="Archana";
+ ownercontact.innerHTML="7845652565";
+
+   
+}
+else if(dogs.style.color=="white"){
+   image.src="assests/dog3full.png";
+   petname.innerHTML="Chinow";
+   petsex.textContent="Female";
+   petage.innerHTML="5 Year";
+   petweight.innerHTML="10 Kg";
+
+  
+      locationname.innerHTML="Madhavaram,Chennai-60";
+ ownername.innerHTML="Madhan";
+ ownercontact.innerHTML="7878452514";
+
+
+
+ 
+}
+else if(birds.style.color=="white"){
+   image.src="assests/bird3full.png";
+   petname.innerHTML="Figgo";
+   petsex.textContent="Male";
+   petage.innerHTML="3 Month";
+   petweight.innerHTML="2.05 Kg";
+
+   locationname.innerHTML="Besant Nagar,Chennai-89";
+ ownername.innerHTML="Karthick";
+ ownercontact.innerHTML="9845451112";
+   
+}
+else if(fishes.style.color=="white"){
+   image.src="assests/fish3full.png";
+   petname.innerHTML="Cleopat";
+   petsex.textContent="Female";
+   petage.innerHTML="6 Year";
+   petweight.innerHTML="2.36 Kg";
+   locationname.innerHTML="Kodungaiyur,Chennai-118";
+ ownername.textContent="Amutha";
+ ownercontact.innerHTML="9566125656";
+   
+}
+
+}
+
+
+function goback(){
+    items.style.display="none";
+    mainpage.style.display="block";
+}
+function adopt(){
+    alert("Please Join Our Animal Community First");
+}
+
+
+
+    </script>
+</body>
+</html>
